@@ -832,7 +832,7 @@
         /// <returns type="string">Value after formatting</returns>
 
         value = "" + formatRowLiteral(value, type);
-        value = encodeURIComponent(value.replace("'", "''"));
+        value = encodeURIComponent(value.replace(/'/g, "''"));
         switch ((type)) {
             case "Edm.Binary":
                 return "X'" + value + "'";
