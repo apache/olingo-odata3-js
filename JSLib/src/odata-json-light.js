@@ -1064,7 +1064,7 @@
             }
         }
 
-        var fragment = decodeURIComponent(metadataUri.substring(fragmentStart + 1, fragmentEnd));
+        var fragment = metadataUri.substring(fragmentStart + 1, fragmentEnd);
         if (fragment.indexOf("/$links/") > 0) {
             return jsonLightMakePayloadInfo(PAYLOADTYPE_LINKS);
         }
