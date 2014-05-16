@@ -15,6 +15,19 @@
 
 function getAllTestFiles() {
     return [
+// MISSING CODEPLEX CODE STARTS
+        "odata-batch-functional-tests.html",
+        "odata-metadata-awareness-functional-tests.html",
+        "odata-read-functional-tests.html",
+        "odata-request-functional-tests.html",
+        "odata-links-functional-tests.html",
+        "odata-cache-functional-tests.html",
+        "odata-cache-filter-functional-tests.html",
+        "odata-cache-fperf-tests.html",
+        "odata-cache-rx-functional-tests.html",
+        "odata-read-crossdomain-functional-tests.html",
+        "datajs-cache-large-collection-functional-tests.html",
+// MISSING CODEPLEX CODE STOPS
         "odata-qunit-tests.htm"
     ];
 }

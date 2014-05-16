@@ -19,6 +19,16 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
             1 - failed to launch tests
             2 - tests failed
         </comment>
+        <!-- MISSING CODEPLEX CODE STARTS -->
+        <named name="testFiles" helpstring="Comma-separated list of HTML test files to run"
+            type="string" required="false" />
+        <named name="browsers" helpstring="Comma-separated list of browsers to run on" type="string"
+            required="false" />
+        <named name="timeout" helpstring="Timeout (in seconds) for each browser" type="string"
+            required="false" />
+        <named name="reinstallWCFDataServices" helpstring="If specified WCF Data Services will be reinstalled"
+            type="boolean" required="false" />
+        <!-- MISSING CODEPLEX CODE STOPS -->
     </runtime>
     <script language="JScript" src="test-list.js" />
     <script language="JScript">
@@ -393,6 +403,11 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
                 result = shell.ExpandEnvironmentStrings("%DJSOUT%\\JSLib.sln\\tests");
             }
 
+            // MISSING CODEPLEX CODE STARTS
+            if (result === "%DJSOUT%\\JSLib.sln\\tests") {
+                result = shell.ExpandEnvironmentStrings("%_nttree%\\DataJS\\JSLib.sln\\tests");
+            }
+            // MISSING CODEPLEX CODE STOPS
 
             return result;
         }

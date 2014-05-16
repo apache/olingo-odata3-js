@@ -207,6 +207,12 @@
                 nextUrl = JSON.parse(nextUrl).d;
                 if (nextUrl) {
                     window.location.href = nextUrl;
+                    // MISSING CODEPLEX CODE STARTS
+                } else if (window.jscoverage_report) {
+                    // Generate code coverage reports if it is enabled
+                    // See http://siliconforks.com/jscoverage/manual.html for more information
+                    jscoverage_report();
+                    // MISSING CODEPLEX CODE STOPS
                 }
             }
         }
